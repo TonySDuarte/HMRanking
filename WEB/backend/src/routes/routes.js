@@ -1,7 +1,9 @@
 const express = require('express');
+const Atleta = require('../controllers/atletaController');
 
 const routes = express.Router();
 
-// routes.get("/supervisor", OS_Supervisor.abertas_supervisor);
+routes.post("/cadastrarAtleta", Atleta.cadastrarAtleta);
+routes.get("/read", Atleta.buscarUsuario)
 
 module.exports = routes;
