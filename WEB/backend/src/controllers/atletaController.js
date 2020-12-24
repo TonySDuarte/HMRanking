@@ -4,8 +4,7 @@ const cadastrarAtleta = async (req, res, next) => {
     try {
         const usuario = req.body
         await Atleta.setAtleta(usuario)
-        // await User.setAt(usuario)
-        return res.status(200).json({ message: "novo usuario cadastrado" })
+        return res.status(200).json({ message: "Novo atleta cadastrado." })
     } catch (error) {
         next();
         return res.status(400).json({ message: error })
@@ -20,7 +19,7 @@ const cadastrarAtleta = async (req, res, next) => {
             if (usuarios.length != 0) {
                 return res.status(200).json(usuarios)
             }
-            return res.status(400).json({ erro: "nenhum dado encontrado" })
+            return res.status(400).json({ erro: "Nenhum dado encontrado" })
         } catch (error) {
             next();
             console.log(error)

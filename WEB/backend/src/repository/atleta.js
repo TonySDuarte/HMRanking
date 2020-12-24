@@ -17,9 +17,10 @@ async function setAtleta(user) {
         nome: user.nome,
         senha: user.senha,
         usuario: user.usuario,
-        key: user.key,
+        exp: user.exp,
+        patente: user.patente
     }
-    
+
     if (!user_id) {
         user_id = firebase
             .database()
