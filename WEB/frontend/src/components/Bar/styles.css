@@ -1,0 +1,63 @@
+
+.trapezio {
+    position: absolute;
+    width: 0;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 120px solid white;
+  
+    left: 55px;
+    bottom: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  .retangulo {
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    left: 55px;
+    bottom: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  .retangulo ul {
+    padding: 0 0 0 0;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+  
+  
+    margin-top: 5%;
+  }
+  .retangulo a {
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 40%;
+    margin-bottom: 40%;
+    color: black;
+  }
+  
+  .hr {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+  
+    right: 0;
+  
+    background: white;
+  }
+  
+  

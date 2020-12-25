@@ -1,17 +1,16 @@
 import react from 'react'
 import './styles.css'
 
-export default function Home() {
+export default function Bar() {
     return (
         <div>
-
             <div className="retangulo">
                 <ul>
-                    <a href="#">Inicio</a>
-                    <a href="#">Missões</a>
-                    <a href="#">Ranking</a>
-                    <a href="#">Pontuar</a>
-                    <a href="#">Cadastrar</a>
+                    <a href="/">Inicio</a>
+                    <a href="/missoes">Missões</a>
+                    <a href="/ranking">Ranking</a>
+                    <a href="/pontuar">Pontuar</a>
+                    <a href="/cadastrar">Cadastrar</a>
                 </ul>
             </div>
 

@@ -14,10 +14,9 @@ async function setQuests(quests) {
     let missoes_id = false;
 
     const quests_data = {
-        titulo: quests.titulo,
-        patente: quests.patente,
         exercicios: quests.exercicios,
-        pontos: quests.pontos
+        pontos: quests.pontos,
+        titulo: quests.titulo
     }
 
     if (!missoes_id) {
