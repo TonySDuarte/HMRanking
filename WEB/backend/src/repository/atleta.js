@@ -15,7 +15,6 @@ async function setAtleta(user) {
 
     const user_data = {
         nome: user.nome,
-        senha: user.senha,
         usuario: user.usuario,
         exp: user.exp,
         patente: user.patente
