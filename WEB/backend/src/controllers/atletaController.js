@@ -1,6 +1,6 @@
 const Atleta = require("../repository/atleta");
 
-const cadastrarAtleta = async (req, res, next) => {
+cadastrarAtleta = async (req, res, next) => {
     try {
         const usuario = req.body
         await Atleta.setAtleta(usuario)
@@ -15,10 +15,28 @@ const cadastrarAtleta = async (req, res, next) => {
     buscarUsuario = async (req, res, next) => {
         try {
             const usuarios = [];
-            usuarios.push(await Atleta.readUserData())
+            const itens = await Atleta.readUserData().then(res => {
+                return res
+            })
+
+            itens.forEach(dados => {
+                usuarios.push(
+                    {
+                        nome: dados.val().nome,
+                        usuario: dados.val().usuario,
+                        senha: dados.val().senha,
+                        exp: dados.val().exp,
+                        patente: dados.val().patente
+                    }
+                )
+            });
+
+            // console.log(usuarios)
+
             if (usuarios.length != 0) {
-                return res.status(200).json(usuarios)
+                return res.json(usuarios)
             }
+
             return res.status(400).json({ erro: "Nenhum dado encontrado" })
         } catch (error) {
             next();

@@ -1,11 +1,13 @@
-import react from 'react'
+import react, { Component } from 'react'
 import Bar from '../../components/Bar'
 import './styles.css'
 
-export default function Inicio() {
-    return (
-        <div>
-            <Bar/>
-        </div>
-    );
+export default class Inicio extends Component {
+    render() {
+        return (
+            <div>
+                <Bar />
+            </div>
+        );
+    }
 }

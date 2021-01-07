@@ -1,10 +1,8 @@
-const { query } = require('express');
 const firebase = require('../services/firebase')
 
 async function readUserData() {
     try {
-        const itens = await firebase.database().ref('usuarios').once("value")
-        return itens.val();
+        return firebase.database().ref('usuarios').once('value')
     } catch (error) {
         return error;
     }
@@ -16,6 +14,7 @@ async function setAtleta(user) {
     const user_data = {
         nome: user.nome,
         usuario: user.usuario,
+        senha: user.senha,
         exp: user.exp,
         patente: user.patente
     }
