@@ -9,7 +9,6 @@ export default class Cadastrar extends Component {
         super(props);
         this.state = {
             atleta: [],
-            users: []
         }
     }
 

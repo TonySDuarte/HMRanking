@@ -1,6 +1,6 @@
 const Quest = require("../repository/quests");
 
-const cadastrarMissoes = async (req, res, next) => {
+cadastrarMissoes = async (req, res, next) => {
     try {
         const quests = req.body
         await Quest.setQuests(quests)
@@ -13,10 +13,26 @@ const cadastrarMissoes = async (req, res, next) => {
 
     buscarMissoes = async (req, res, next) => {
         try {
-            const quests = [];
-            quests.push(await Quest.readQuestsData())
+            const quests = []
+            const itens = await Quest.readQuestsData().then(res => {
+                return res
+            })
+            // console.log('quests ', itens)
+
+            itens.forEach(dados => {
+                quests.push(
+                    {
+                        exercicios: dados.val().exercicios,
+                        pontos: dados.val().pontos,
+                        titulo: dados.val().titulo
+                    }
+                )
+            });
+
+            // console.log(quests)
+
             if (quests.length != 0) {
-                return res.status(200).json(quests)
+                return res.json(quests)
             }
             return res.status(400).json({ erro: "Nenhum dado encontrado." })
         } catch (error) {

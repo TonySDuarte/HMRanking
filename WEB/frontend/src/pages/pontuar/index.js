@@ -1,4 +1,3 @@
-import react from 'react'
 import Bar from '../../components/Bar'
 import './styles.css'
 

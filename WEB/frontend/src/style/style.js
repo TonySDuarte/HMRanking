@@ -57,3 +57,32 @@ export const Cards = styled.ul`
         }
   }
 `;
+
+export const CardsQuests = styled.ul`
+  display: flex;
+  justify-content: flex-start;
+  padding-inline-start: 13%;
+  flex-wrap: wrap;
+  margin-top: 7%;
+
+  list-style-type: disc;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  
+  li {
+    position: relative;
+    width: 45%;
+    height: 230px;
+
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    margin-bottom: 20px;
+    margin-left: 0.7%;
+
+    list-style: none;
+    text-align: center;
+    
+  }
+`;

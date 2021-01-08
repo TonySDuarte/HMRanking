@@ -1,10 +1,8 @@
-const { query } = require('express');
 const firebase = require('../services/firebase')
 
 async function readQuestsData() {
     try {
-        const itens = await firebase.database().ref('missoes').once("value")
-        return itens.val();
+        return firebase.database().ref('missoes').once("value")
     } catch (error) {
         return error;
     }
