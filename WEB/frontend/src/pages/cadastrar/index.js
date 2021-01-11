@@ -18,11 +18,10 @@ export default class Cadastrar extends Component {
 
     async buscarAtletas() {
         const response = await api.get('/read').then(res => {
-            // res.data.usuarios
-
             console.log(res.data)
             return res.data
         }).catch(error => {
+            alert("erro")
             console.log({ error: error });
         });
 
@@ -33,6 +32,7 @@ export default class Cadastrar extends Component {
 
     render() {
         const { atleta } = this.state;
+        
         return (
             <div>
                 <Bar />

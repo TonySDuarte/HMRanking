@@ -26,12 +26,11 @@ cadastrarAtleta = async (req, res, next) => {
                         usuario: dados.val().usuario,
                         senha: dados.val().senha,
                         exp: dados.val().exp,
-                        patente: dados.val().patente
+                        patente: dados.val().patente,
+                        key: dados.val().key,
                     }
                 )
             });
-
-            // console.log(usuarios)
 
             if (usuarios.length != 0) {
                 return res.json(usuarios)
@@ -43,9 +42,22 @@ cadastrarAtleta = async (req, res, next) => {
             console.log(error)
             return res.status(500).json({ message: "Internal server error", error: error })
         }
+    },
+
+    atualizarPontos = async (req, res, next) => {
+        try {
+            // const usuario = req.body
+            // console.log(req.body.pontos)
+            await Atleta.updatePontos(req.body.pontos, req.body.key)
+            return res.status(200).json({ message: "Update." })
+        } catch (error) {
+            next();
+            return res.status(400).json({ message: error })
+        }
     }
 
 module.exports = {
     cadastrarAtleta,
     buscarUsuario,
+    atualizarPontos
 }

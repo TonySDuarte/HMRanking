@@ -10,4 +10,6 @@ routes.get("/read", Atleta.buscarUsuario)
 routes.post("/cadastrarMissoes", Quests.cadastrarMissoes);
 routes.get("/readMissoes", Quests.buscarMissoes);
 
+routes.put("/updateExp", Atleta.atualizarPontos);
+
 module.exports = routes;
