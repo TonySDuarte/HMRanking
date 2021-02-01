@@ -49,7 +49,6 @@ export default class Ranking extends Component {
             }
             vetor[j+1] = atual
         }
-        console.log(vetor)
         return vetor
     }
 
@@ -59,11 +58,12 @@ export default class Ranking extends Component {
         return (
             <div>
                 <Bar />
-                <Cards>
+                <Cards className="tamanho">
                     {atleta.map(item => {
                         return <li key={item.key}>
-                            <p>{item.nome}</p>
-                            <p>Exp: {item.exp}</p>
+                            <h1>{item.nome}</h1>
+                            <p>{item.patente}</p>
+                            <p1>Exp: {item.exp}</p1>
                         </li>
                     })}
                 </Cards>

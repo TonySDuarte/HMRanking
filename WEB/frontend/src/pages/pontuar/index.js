@@ -12,7 +12,6 @@ export default class Pontuar extends Component {
             atleta: [],
             missoes: [],
             missaoSelecionada: [],
-            atletaSelecionado: []
         }
     }
 
@@ -48,11 +47,11 @@ export default class Pontuar extends Component {
     }
 
     render() {
-        const { atleta, missoes, missaoSelecionada, atletaSelecionado } = this.state;
+        const { atleta, missoes, missaoSelecionada } = this.state;
 
         return (
             <div>
-                {/* <Bar /> */}
+                <Bar />
                 <Cards>
                     {atleta.map(item => (
                         <li key={item.key}>
