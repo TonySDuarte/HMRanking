@@ -10,6 +10,9 @@ async function readUserData() {
 
 async function setAtleta(user) {
     let user_id = false;
+    // let user_key = Math.random().toString(36).substr(2, 9);
+
+    
 
     if (!user_id) {
         user_id = firebase
@@ -30,6 +33,7 @@ async function setAtleta(user) {
 
     let updates = {}
     updates['/usuarios/' + user_id] = user_data;
+    // updates2[`/usuarios/${user_id}`] = user_id;
 
     let usuario_ref = firebase.database().ref();
     usuario_ref.update(updates)
@@ -41,12 +45,13 @@ async function setAtleta(user) {
         })
 }
 
-// Chamada na page de pontuar, para adicionar pontos ao atleta
 async function updatePontos(exp, key) {
     let usuario_ref = firebase.database().ref('/usuarios/' + key)
 
     let updates = {}
     updates['/exp'] = exp;
+    // updates['/key'] = key;
+    // updates['/lastup'] = firebase.database.ServerValue.TIMESTAMP;
 
     usuario_ref.update(updates)
         .then(() => {
