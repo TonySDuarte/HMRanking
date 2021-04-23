@@ -10,10 +10,11 @@ export const Loading = styled.div`
 
 export const Cards = styled.ul`
   display: flex;
+  margin: 0;
   justify-content: flex-start;
-  padding-inline-start: 13%;
+  padding-inline-start: 23%;
   flex-wrap: wrap;
-  margin-top: 7%;
+  padding-top: 7%;
 
   list-style-type: disc;
   margin-block-end: 1em;
@@ -26,7 +27,7 @@ export const Cards = styled.ul`
     height: 130px;
 
     background: #ffffff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     border-radius: 14px;
     margin-bottom: 20px;
     margin-left: 0.7%;
@@ -50,7 +51,7 @@ export const Cards = styled.ul`
          margin-block-start: 0.1em;
          margin-block-end: 0em;
          font-size: 20px;
-         color: rgb(70, 69, 69);
+         color: #34495E;
         }
 
         .exp {
@@ -58,17 +59,18 @@ export const Cards = styled.ul`
          margin-block-start: 0.5em;
          margin-block-end: 0em;
          font-size: 20px;
-         color: rgb(70, 69, 69);
+         color: #34495E;
         }
   }
 `;
 
 export const CardsQuests = styled.ul`
+  margin: 0;
+  padding-top: 7%;
   display: flex;
   justify-content: flex-start;
-  padding-inline-start: 13%;
+  padding-inline-start: 23%;
   flex-wrap: wrap;
-  margin-top: 7%;
 
   list-style-type: disc;
   margin-block-end: 1em;
@@ -80,14 +82,11 @@ export const CardsQuests = styled.ul`
     width: 45%;
     height: 230px;
 
-    background: #ffffff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 14px;
-    margin-bottom: 20px;
-    margin-left: 0.7%;
+    background: #3B556D;
+    margin-bottom: 2.5%;
+    margin-left: 2.5%;
 
     list-style: none;
     text-align: center;
-    
   }
 `;
