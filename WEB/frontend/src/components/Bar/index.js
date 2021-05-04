@@ -1,15 +1,15 @@
 import { Component } from 'react'
+// import user from '../../assets/images/user.png'
 import './styles.css'
 
 export default class Bar extends Component {
 
     render() {
         return (
-            <div className="container" >
+            <div className="menu-container" >
 
                 <div className="menu-top" >
-                    <img src="" alt="" />
-                    <a href="#">BJ</a>
+                    <p>GAME-FIT</p>
                 </div>
 
                 <div className="menu-body">
@@ -28,6 +28,9 @@ export default class Bar extends Component {
                         </a>
                         <a href="/cadastrar">
                             Cadastrar
+                        </a>
+                        <a href="/configs">
+                            Configurações
                         </a>
                     </ul>
                 </div>

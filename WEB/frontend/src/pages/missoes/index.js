@@ -40,7 +40,7 @@ export default class Missoes extends Component {
                     {missoes.map((item, index) => (
                         <li key={index}>
                             <h1>{item.titulo}</h1>
-                            <p>Exp: {item.pontos}</p>
+                            <p>+ {item.pontos}</p>
 
                             {item.exercicios.map(item2 => {
                                 return <p>{item2.exercicio}: {item2.rep}x</p>
