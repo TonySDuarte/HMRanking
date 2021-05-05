@@ -64,37 +64,73 @@ export const Cards = styled.ul`
 `;
 
 export const CardsQuests = styled.ul`
-  position: relative;
   display: flex;
-  flex: 1;
-  
   margin: 0;
   padding-top: 4.5%;
   padding-inline-start: 21%;
   flex-wrap: wrap;
   
   li {
-    /* background-image: linear-gradient(to bottom right, #3742fa, #1e90ff); */
     border-radius: 10%;
     border: solid 1.8px #dfe4ea;
-    width: 30%;
-    height: 180px;
+    width: 30.5%;
+    /* height: 220px; */
     border-radius: 5px;
 
     background: #ffffff;
-    margin-bottom: 2.5%;
-    margin-left: 2.5%;
+    margin-bottom: 2%;
+    margin-left: 1.5%;
 
     list-style: none;
 
-    h1 {
+    .top {
       display: flex;
+      justify-content: space-between;
+      
       font-size: 20px;
-      border-top: 5%;
+      font-weight: bolder;
       color: #2f3542;
-      padding: 4% 0 0 5%;
-      margin-block-start: 0;
+      border-bottom: solid 1px #3742fa;
+      vertical-align: middle;
 
+      border-top: 5%;
+      padding: 2% 4% 2% 5%;
+
+      .star {
+        color: yellow;
+      }
+
+    }
+
+    .info {
+      font-size: 17px;
+      display: flex;
+      justify-content: space-between;
+
+      padding: 3% 5% 0 5%;
+      text-align: start;
+
+      .basicInfos p{
+        margin: 17px 0;
+      }
+
+      .missionPoints {
+        font-size: 35px;
+        text-align: center;
+        vertical-align: middle;
+        /* background-color: #5C8FFF88; */
+        padding: 1% 3% 3% 3%;
+      }
+
+    }
+
+    .footer p {
+      text-align: right;
+      padding: 0 5% 2%;
+      margin-block-start: 0;
+      margin-block-end: 0;
+
+      color: #3742fa;
     }
 
   }
